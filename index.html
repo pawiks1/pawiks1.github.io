@@ -3,20 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <script>
-        const firebaseConfig = {
-    apiKey: "AIzaSyC321wn5tcadkMtSvWn6qMllT7YK5Qe2HU",
-    authDomain: "smartlibrary-f1481.firebaseapp.com",
-    projectId: "smartlibrary-f1481",
-    storageBucket: "smartlibrary-f1481.appspot.com",
-    messagingSenderId: "813929480270",
-    appId: "1:813929480270:web:345e022a1236486383031f",
-    measurementId: "G-X6F1R35YFY"
-  };
-  firebase.initializeApp(firebaseConfig);
-
-var database = firebase.database();
-    </script>
+   
 </head>
 <body>
     <div id="status">Initializing...</div>
@@ -75,9 +62,9 @@ var database = firebase.database();
         scanner.onUniqueRead = (txt, result) => {
             
          
-           // alert(result.barcodeFormatString + ': ' + txt);
+           alert(result.barcodeFormatString + ': ' + txt);
             
-            location.href="http://192.168.254.100:5555/book_details.html";
+            location.href="http://192.168.254.100:5555/portal.html";
         };
         await scanner.show();
     });
