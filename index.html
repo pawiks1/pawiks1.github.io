@@ -59,7 +59,11 @@
             }
         };
         scanner.onUniqueRead = (txt, result) => {
-            alert(result.barcodeFormatString + ': ' + txt);
+            
+            localStorage.setItem("code", txt);
+           // alert(result.barcodeFormatString + ': ' + txt);
+            
+            location.href="192.168.254.100:5555";
         };
         await scanner.show();
     });
